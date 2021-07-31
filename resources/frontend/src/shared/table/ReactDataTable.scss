@@ -1,0 +1,266 @@
+@import "../../scss/variables";
+
+.rdt_TableHead {
+    vertical-align: bottom;
+    border-bottom: 1px solid #c8ced3;
+
+    .rdt_TableHeadRow {
+        .sc-ifAKCX {
+            border-left: 1px solid #c8ced3 !important;
+            min-height: 54px;
+
+            &:first-child {
+                border-left: 0 !important;
+            }
+        }
+    }
+}
+
+.uZNoG {
+    border: 1px solid $pagination-border-color;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 0;
+}
+
+.eWVAiH {
+    height: 31px;
+}
+
+.jaFrsL {
+    min-width: 27px;
+}
+
+.jNSZEp {
+    border-top: 1px solid $pagination-border-color;
+    border-bottom: 1px solid $pagination-border-color;
+    border-right: 1px solid $pagination-border-color;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -2px;
+    margin-right: 30px;
+}
+
+.jNSZEp svg {
+    top: 4px;
+}
+
+#pagination-first-page {
+    border: 1px solid $pagination-border-color;
+    outline: none;
+
+    &:hover:not(:disabled) {
+        svg {
+            fill: $white;
+        }
+    }
+
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
+#pagination-previous-page {
+    border: 1px solid $pagination-border-color;
+    outline: none;
+
+    &:hover:not(:disabled) {
+        svg {
+            fill: $white;
+        }
+    }
+
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
+#pagination-next-page {
+    border: 1px solid $pagination-border-color;
+    outline: none;
+
+    &:hover:not(:disabled) {
+        svg {
+            fill: $white;
+        }
+    }
+
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
+#pagination-last-page {
+    border: 1px solid #c8ced3;
+    outline: none;
+
+    &:hover:not(:disabled) {
+        svg {
+            fill: $white;
+        }
+    }
+
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
+// page number main section class
+.sc-iAyFgw {
+    margin-left: 10px;
+}
+
+// page number main section
+.sc-kEYyzF {
+    margin-right: 10px;
+}
+
+.rdt_TableRow {
+    .rdt_TableCell {
+        border-left: 1px solid #c8ced3;
+        font-size: 14px;
+        min-height: 54px;
+        color: rgb(35, 40, 44);
+
+        &:first-child {
+            border-left: 0;
+        }
+    }
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be provide a specified width for sort icon aligned on table header
+ */
+.caUhkS span.__rdt_custom_sort_icon__ i {
+    width: auto !important;
+    height: auto !important;
+    font-size: 12px !important;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be unset an initial opacity for asc sorted icon
+ */
+.caUhkS span.__rdt_custom_sort_icon__.asc i {
+    opacity: unset;
+    transform: none !important;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be override an opacity of  default class name by asc icon
+ */
+.caUhkS span.__rdt_custom_sort_icon__.asc i.sort-arrow-group__visible {
+    opacity: .5;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be override an opacity of default class name by desc icon
+ */
+.caUhkS span.__rdt_custom_sort_icon__.desc i.sort-arrow-group__visible {
+    opacity: .5;
+}
+
+/* This class name should be renamed as the package has been updated
+     Purpose for this class name is to be provide a specified width for sort icon aligned on table header at the time of hovered
+ */
+.jWjBKP span.__rdt_custom_sort_icon__ i, .jWjBKP span.__rdt_custom_sort_icon__ svg {
+    width: auto !important;
+    height: auto !important;
+    font-size: 12px !important;
+    transform: none !important;
+}
+
+/* This class name should be renamed as the package has been updated
+    Purpose for this class name is to be override default opacity when sorted header icon should be hovered
+ */
+.jWjBKP:hover span, .jWjBKP:hover span.__rdt_custom_sort_icon__ * {
+    opacity: 0.8 !important;
+}
+
+.rdt_TableCol_Sortable {
+    position: relative;
+    width: 100%;
+
+    span {
+        position: absolute;
+        right: 0;
+        width: 25px;
+        top: 10px;
+    }
+}
+
+.search-filter-container, .search-container {
+    display: flex;
+    justify-content: flex-end;
+
+    &__filter-input {
+        min-width: 255px;
+        margin-right: 16px;
+    }
+
+    &__date-range-picker {
+        margin-right: 16px;
+    }
+
+    &__search-input {
+        width: 255px;
+    }
+}
+
+@media (max-width: 636px) {
+    .search-filter-container__filter-input {
+        min-width: 200px;
+    }
+    .search-filter-container__search-input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 518px) {
+
+    .search-filter-container {
+        flex-direction: column;
+    }
+    .search-filter-container__filter-input {
+        min-width: 100%;
+    }
+    .search-filter-container__search-input {
+        width: auto;
+    }
+}
+
+.rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX:last-child {
+    padding-left: calc(48px / 2);
+}
+
+html[dir="rtl"] {
+
+    .rdt_TableRow .rdt_TableCell:first-child,
+    .rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX:first-child {
+        border-left: 1px solid #c8ced3 !important;
+    }
+    .rdt_TableRow .rdt_TableCell:last-child,
+    .rdt_TableHead .rdt_TableHeadRow .sc-ifAKCX:last-child {
+        border-left: 0 !important;
+    }
+    .rdt_TableCol_Sortable span {
+        left: 0;
+        right: auto;
+    }
+    .sc-hSdWYo:not(first-child) {
+        unicode-bidi: plaintext;
+        direction: rtl;
+    }
+    .sc-kEYyzF {
+        margin-right: 20px;
+    }
+
+    .jNSZEp svg {
+        right: unset;
+        left: 0;
+    }
+
+    .search-filter-container__filter-input, .search-container__filter-input {
+        margin-right: unset;
+        margin-left: 16px;
+    }
+}

@@ -1,0 +1,383 @@
+// Styles
+// CoreUI Icons Set
+@import '~@coreui/icons/css/coreui-icons.css';
+// Import Flag Icons Set
+@import '~flag-icon-css/css/flag-icon.min.css';
+// Import Font Awesome Icons Set
+@import '~font-awesome/css/font-awesome.min.css';
+// Import Simple Line Icons Set
+@import '~simple-line-icons/css/simple-line-icons.css';
+// Import Main styles for this application
+@import './scss/style.scss';
+// Styles
+// CoreUI Icons Set
+@import '~@coreui/icons/css/coreui-icons.css';
+// Import Flag Icons Set
+@import '~flag-icon-css/css/flag-icon.min.css';
+// Import Font Awesome Icons Set
+@import '~font-awesome/css/font-awesome.min.css';
+// Import Simple Line Icons Set
+@import '~simple-line-icons/css/simple-line-icons.css';
+// Import Main styles for this application
+@import './scss/style.scss';
+// Import react datepicker scss
+@import "~react-datepicker/dist/react-datepicker.css";
+@import '~react-image-crop/lib/ReactCrop.scss';
+@import '~react-toastify/dist/ReactToastify.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.page-heading {
+    @extend .float-left;
+    @extend .text-dark;
+    @extend .pr-3;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.sidebar {
+
+    .nav-item {
+        min-width: 201px;
+    }
+
+    .sidebar-nav {
+        .nav-link.active {
+
+            .nav-icon {
+                color: $orange;
+            }
+
+            &:hover {
+                .nav-icon {
+                    color: #fff;
+                }
+            }
+        }
+
+        .nav-link {
+            &:hover {
+                background-color: $orange;
+            }
+        }
+    }
+}
+
+.sidebar .nav-link .nav-icon {
+    font-size: 13px !important;
+}
+
+.sort-arrow-group {
+    position: relative;
+    font-size: 12px;
+
+    .fa-long-arrow-up {
+        margin-right: 2px;
+    }
+    .fa-long-arrow-down {
+        vertical-align: middle;
+    }
+
+    &__visible {
+        opacity: .5;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+    &__hidden {
+        opacity: 1;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
+    height: 45px;
+    border-radius: 0 0.25rem .25rem 0;
+}
+
+.custom-select {
+    height: 35px !important;
+}
+
+.form-group .control-label:after {
+    content: "*";
+    color: $red;
+}
+
+.form-group .control-option:after {
+    content: "*";
+    color: $red;
+}
+
+.modal-header .close {
+    color: $white;
+    opacity: 1;
+    font-size: 1.37rem;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.app-header .nav-item .nav-link > .img-avatar {
+    width: 35px;
+    object-fit: cover;
+}
+
+.sticky-table-container {
+    .card {
+        padding: 1.25rem;
+    }
+
+    .card-body {
+        min-height: calc(100vh - 240px);
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+    }
+
+    .table {
+        border-top: 0;
+
+        @-moz-document url-prefix() {
+            thead tr:nth-child(1) th {
+
+                &:before {
+                    left: 1px !important;
+                    border-top: 0 !important;
+                    border-right: 1px solid $border-bg;
+                    border-bottom: 1px solid $border-bg;
+                    top: 1px !important;
+                }
+            }
+            thead tr:nth-child(1) th {
+                background: white;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-top: 1px solid $border-bg;
+                    top: -1px;
+                }
+            }
+        }
+    }
+
+    .table-responsive {
+        overflow: inherit;
+        margin-bottom: 1%;
+    }
+}
+
+.app-footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 111;
+
+    &__power-by {
+        margin-left: auto;
+    }
+
+}
+
+.brand-minimized {
+
+    .header__app-logo {
+        margin-left: 1px;
+    }
+    .header__app-name {
+        display: none;
+    }
+}
+
+.sidebar-minimized .sidebar .nav-link .nav-icon {
+    font-size: 20px !important;
+}
+
+.sidebar .nav {
+    width: 201px;
+}
+
+.sidebar .nav-item {
+    min-width: auto;
+}
+
+html[dir="rtl"] {
+
+    @media (max-width: 991px) {
+        .app-header .navbar-brand {
+            width: calc(100% - 250px) !important;
+        }
+    }
+
+    .app-header .navbar-nav {
+        padding: 0;
+        margin-left: inherit !important;
+    }
+
+    .navbar-brand {
+        margin-right: 10px;
+    }
+
+    .sort-arrow-group .fa-long-arrow-up {
+        margin-right: unset;
+        margin-left: 2px;
+    }
+    .app-footer__power-by {
+        margin-left: unset;
+        margin-right: auto;
+    }
+
+    @-moz-document url-prefix() {
+
+        thead tr:nth-child(1) th {
+            position: relative !important;
+            background: unset !important;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-top: 1px solid $border-bg;
+                top: -1px;
+            }
+        }
+    }
+}
+
+.table-multi-item-responsive {
+
+    @media (max-width: 1399px) {
+        input.form-control {
+            border-top-left-radius: .25rem !important;
+            border-bottom-left-radius: .25rem !important;
+        }
+
+        .input-group-prepend {
+            display: none;
+        }
+    }
+}
+
+.header {
+
+    &__avatar {
+        vertical-align: middle;
+        color: $white;
+        display: inline-block;
+        background: $image-avatar;
+        border-radius: 50%;
+
+        &-text {
+            display: inline-block;
+            margin: 7px;
+        }
+    }
+    &__user-name {
+        vertical-align: middle;
+    }
+
+    &__app-logo {
+        width: 40px;
+    }
+
+    &__app-name {
+        color: $infy-name;
+    }
+
+    &__dropdown {
+        right: auto;
+    }
+}
+
+.app-header .navbar-brand {
+    width: auto !important;
+    margin-left: 10px;
+}
+
+@media (max-width: 991px) {
+    .app-header .navbar-brand {
+        width: calc(100% - 215px) !important;
+        margin: auto;
+        position: unset !important;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 580px) {
+    .app-header .navbar-brand {
+        width: auto !important;
+    }
+}
+
+.user {
+    &__avatar {
+        background: $image-avatar;
+        width: 35px;
+        height: 35px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        color: $white;
+    }
+}
+
+.Toastify__toast-container {
+    width: unset;
+    min-width: 350px;
+    padding: 0;
+
+    .Toastify__toast {
+        padding: 0;
+        overflow: unset;
+    }
+    .Toastify__toast--default {
+        color: $black;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+.card-body {
+    @media (max-width: 340px) {
+        padding: 0.25rem;
+    }
+}
+
+.react-select {
+    &__input {
+        [class*="-menu"] {
+            z-index: 1 !important;
+        }
+    }
+}

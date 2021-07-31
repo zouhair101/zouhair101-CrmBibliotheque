@@ -1,0 +1,29 @@
+@import "../../../../scss/variables";
+
+.book-form-card {
+    display: flex;
+
+    &__hr {
+        margin-top: 0;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .book-form-card {
+        flex-direction: column;
+    }
+
+    .book-form-card__primary-details {
+        margin-top: 30px;
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .book-form-card__book-cover {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+}

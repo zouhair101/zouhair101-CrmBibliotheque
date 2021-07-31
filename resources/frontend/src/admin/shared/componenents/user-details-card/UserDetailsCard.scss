@@ -1,0 +1,103 @@
+@import "../../../../scss/variables";
+
+html[dir="rtl"] {
+
+    @media (min-width: 1140px) {
+        .user-details-card__item {
+            margin: auto 52px 25px auto;
+        }
+    }
+}
+
+.user-details-card {
+    width: calc(100% - 250px);
+
+    @media (max-width: 1139px) {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__row {
+        @media (max-width: 1139px) {
+            flex-flow: column;
+        }
+    }
+
+    &__item-container {
+        margin-left: 50px;
+        @media (max-width: 1139px) {
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        @media (max-width: 350px) {
+            margin-left: 0;
+        }
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 25px;
+
+        @media (max-width: 1139px) {
+            width: 100%;
+        }
+
+        @media (min-width: 1140px) {
+            margin: auto auto 25px auto;
+        }
+
+        &-heading {
+            min-width: 120px;
+            font-weight: 700;
+        }
+    }
+
+    &__image-holder-wrapper {
+        width: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        @media (max-width: 1139px) {
+            margin: auto;
+        }
+
+        @media (max-width: 350px) {
+            width: 100%;
+        }
+    }
+
+    &__image-holder {
+        position: relative;
+        width: 250px;
+        border-radius: 10px;
+        background: gray;
+        object-fit: cover;
+
+        @media (max-width: 350px) {
+            width: 100%;
+        }
+    }
+
+    &__avatar {
+        height: 250px;
+        width: 250px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 350px) {
+            width: 100%;
+        }
+
+        &-text {
+            height: auto;
+            background-color: $image-avatar;
+            color: white;
+            border-radius: 50%;
+            padding: 70px;
+            font-size: 50px;
+        }
+    }
+}

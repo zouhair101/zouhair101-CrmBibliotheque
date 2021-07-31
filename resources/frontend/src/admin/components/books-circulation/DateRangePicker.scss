@@ -1,0 +1,31 @@
+.date-picker {
+  font-size: 14px;
+
+  .list-group {
+
+    .list-group-item {
+      padding: 0.4rem 1.25rem;
+      border: unset;
+
+      &:hover {
+        cursor: pointer;
+        background: #00C6FF;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  &__child-popover {
+
+    .popover {
+      min-width: 700px;
+    }
+  }
+}
+
+.input-group {
+
+  .form-control {
+    background-color: white;
+  }
+}

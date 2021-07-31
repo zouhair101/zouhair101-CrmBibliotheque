@@ -1,0 +1,29 @@
+html[dir="rtl"] {
+
+    .save-action {
+
+        &__save-btn {
+            float: left;
+            margin-left: 0;
+        }
+        &__cancel-btn {
+            float: left;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+}
+
+.save-action {
+    margin-top: 10px;
+
+    &__save-btn {
+        float: right;
+        margin-left: 10px;
+    }
+
+    &__cancel-btn {
+        float: right;
+        margin-left: 10px;
+    }
+}

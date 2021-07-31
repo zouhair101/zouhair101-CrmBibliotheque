@@ -1,0 +1,105 @@
+@import "../../../scss/variables";
+
+.image-holder-wrapper {
+    max-width: 220px;
+    width: 100%;
+    height: 250px;
+    border: 1px solid $image-border;
+    border-radius: 10px;
+    overflow: hidden;
+    @media (max-width: 1139px) {
+        margin: auto;
+    }
+}
+
+.image-holder {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    background: gray;
+    object-fit: cover;
+}
+
+.user-detail-row {
+    @media (max-width: 1139px) {
+        flex-flow: column;
+    }
+}
+
+.user-details-card {
+    width: calc(100% - 220px);
+
+    @media (max-width: 1139px) {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item-container {
+        margin-left: 50px;
+        @media (max-width: 1139px) {
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 25px;
+
+        @media (max-width: 1139px) {
+            width: 100%;
+        }
+
+        @media (min-width: 1140px) {
+            margin: auto auto 25px auto;
+        }
+
+        &-heading {
+            min-width: 110px;
+            font-weight: 700;
+        }
+    }
+
+    &-form {
+        display: flex;
+
+        &__item-header:after {
+            content: "*";
+            color: $red;
+        }
+    }
+}
+
+.member-form {
+    display: flex;
+
+    &__switch {
+        position: relative;
+        top: 3px;
+        height: 10px;
+    }
+}
+
+.member-profile {
+
+    &__title {
+        margin-bottom: 9px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .member-form {
+        flex-direction: column;
+    }
+    .member-profile {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .primary-detail {
+        margin-top: 30px;
+        flex: 100%;
+        max-width: 100%;
+    }
+}

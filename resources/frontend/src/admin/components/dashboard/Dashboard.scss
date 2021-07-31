@@ -1,0 +1,52 @@
+.dashboard {
+
+    &__card-wrapper {
+
+        @media (min-width: 1280px) {
+            flex: 1;
+            max-width: 100%;
+        }
+    }
+
+    &__card-body {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__card {
+
+        &-count {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        &-title {
+            margin-top: 18px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        &-icon {
+            float: right;
+            margin-top: -40px;
+            opacity: .7;
+        }
+    }
+}
+
+.chart-wrapper-empty-component {
+    width: 100%;
+}
+
+.chart-wrapper-content {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+}
+
+html[dir='rtl'] {
+    .dashboard__card-icon {
+        float: left;
+    }
+}

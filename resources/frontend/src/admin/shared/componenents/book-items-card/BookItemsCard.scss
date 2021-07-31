@@ -1,0 +1,34 @@
+@import "../../../../scss/variables";
+
+.book-items-card {
+
+    &__item-header:after {
+        content: "*";
+        color: $red;
+    }
+
+    &__format, &__language, &__publisher {
+        width: 20%;
+    }
+
+    &__action-btn {
+        margin-top: 10px;
+    }
+
+    &__responsive {
+        min-width: 150px;
+    }
+
+}
+
+.btn-outline-primary {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 700px;
+    }
+}

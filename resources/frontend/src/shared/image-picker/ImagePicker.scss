@@ -1,0 +1,122 @@
+@import "../../scss/variables";
+
+.image {
+
+    &__holder {
+        position: relative;
+        width: 200px;
+        margin: auto;
+        border-radius: 10px;
+        background: gray;
+        cursor: pointer;
+
+        @media (max-width: 576px) {
+            width: 185px;
+        }
+
+        .btn-secondary:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+    }
+
+    &__favicon-holder {
+        position: relative;
+        width: 120px;
+        margin: auto;
+        border-radius: 10px;
+        background: gray;
+        cursor: pointer;
+
+        .btn-secondary:focus {
+            box-shadow: none !important;
+            outline: none !important;
+        }
+
+    }
+
+    &__preview {
+        border-radius: 10px;
+        object-fit: cover;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__favicon-preview {
+        border-radius: 10px;
+        object-fit: cover;
+        text-align: center;
+    }
+
+    &__dropdown-btn {
+        background-color: $image-cover !important;
+        border: 0 !important;
+        position: absolute;
+        top: -146px;
+        left: 25%;
+        width: 100px;
+        height: 96px;
+        white-space: normal;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    &__favicon-dropdown-btn {
+        border: 0 !important;
+        position: absolute;
+        top: -96px;
+        left: 18%;
+        width: 74px;
+        height: 76px;
+        white-space: normal;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    &__dropdown-menu {
+        top: -37px !important;
+        left: -32px !important;
+    }
+
+    &__favicon-dropdown-menu {
+        font-size: 13px;
+        min-width: 70px;
+        top: -37px !important;
+        left: -31px !important;
+    }
+
+    &__avatar {
+        height: 200px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-text {
+            height: auto;
+            background-color: $image-avatar;
+            color: white;
+            border-radius: 50%;
+            padding: 50px;
+            font-size: 50px;
+        }
+    }
+
+    &__favicon-avatar {
+        height: 120px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-text {
+            height: auto;
+            background-color: $image-avatar;
+            color: white;
+            border-radius: 50%;
+            padding: 50px;
+            font-size: 50px;
+        }
+    }
+}

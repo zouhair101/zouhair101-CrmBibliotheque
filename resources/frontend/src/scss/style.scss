@@ -1,0 +1,43 @@
+// If you want to override variables do it here
+@import "variables";
+// Import styles
+@import "~@coreui/coreui/scss/coreui.scss";
+// Temp fix for reactstrap
+@import '~@coreui/coreui/scss/_dropdown-menu-right.scss';
+// If you want to add something do it here
+@import "custom";
+// ie fixes
+@import "ie-fix";
+
+.form-control:focus {
+    outline: none;
+    border: 1px solid $blue;
+    -webkit-box-shadow: 0 0 5px $blue;
+    box-shadow: 0 0 5px $blue;
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.1rem rgba(255, 0, 0, 0.25) !important;
+}
+
+.css-1pahdxg-control:hover {
+    border: 1px solid $blue !important;
+}
+
+.css-1pahdxg-control {
+    border: 1px solid $blue !important;
+    outline-color: $blue !important;
+    box-shadow: 0 0 5px $blue !important;
+}
+
+.css-9gakcf-option {
+    background-color: $blue !important;
+}
+
+.css-1n7v3ny-option {
+    background-color: rgba($blue, .4) !important;
+}
+
+.css-yk16xz-control {
+    border: 1px solid #e4e7ea !important;
+}

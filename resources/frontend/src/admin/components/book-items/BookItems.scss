@@ -1,0 +1,49 @@
+@import "../../../scss/variables";
+
+.book-item {
+
+    &__table {
+
+        &-book-code {
+            width: 135px;
+        }
+
+        &-book-link-code {
+            width: 135px;
+            color:  $blue;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-status, &-action {
+            width: 100px;
+            text-align: center;
+        }
+        &-price {
+            width: 150px;
+            text-align: right;
+        }
+    }
+}
+
+.input-file {
+    width: 105px;
+    border: solid 2px #00C6FF;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+
+    &__input-type {
+        display: none;
+    }
+}
+
+.file-name {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,61 @@
+.member-modal {
+    max-width: 1000px;
+}
+
+.member-table-row {
+    cursor: pointer;
+
+    &__profile {
+        width: 90px;
+
+        &-img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__plan-name {
+        width: 186px;
+    }
+
+    &__switch {
+        width: 90px;
+    }
+}
+
+.member-form {
+    display: flex;
+
+    &__switch {
+        position: relative;
+        height: 26px;
+    }
+
+}
+
+.member-profile {
+    &__title {
+        margin-bottom: 18px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .member-form {
+        flex-direction: column;
+    }
+    .member-profile {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .primary-detail {
+        margin-top: 30px;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.fa-check-square-o {
+    font-size: 20px;
+}

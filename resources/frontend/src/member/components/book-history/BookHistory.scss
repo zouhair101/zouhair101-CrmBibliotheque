@@ -1,0 +1,13 @@
+.book {
+    &-name {
+        max-width: 650px;
+    }
+
+    &-action {
+        width: 90px;
+    }
+
+    &-return-date {
+        width: 100px;
+    }
+}

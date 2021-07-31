@@ -1,0 +1,84 @@
+// Variable overrides
+$white: #FFF !default;
+$red: #FF0000 !default;
+$green:#4cd137 !default;
+$tertiary: #2EC551 !default;
+$border-bg: #c8ced3 !default;
+$grey-background: #f5f5f5 !default;
+$grey-border: #ddd !default;
+$grey-text: #898989 !default;
+$grey-dark: #444 !default;
+$main-light: #d9f2fb !default;
+$main: #00a9e0 !default;
+$main-dark: #007da6 !default;
+$success: #7fd81e !default;
+$error: #ff5100 !default;
+$warning: #f6c223 !default;
+$body: #081f2c !default;
+$image-cover: #e2e2e28f !default;
+$control-disabled: #7b7b7b !default;
+$input-checked: #4a8bee !default;
+$input-disabled: #e6e6e6 !default;
+$input-focused: #0e647d !default;
+$input-indicator: #ccc !default;
+$select-disabled: #e4e7ea !default;
+$image-bg: #e2e2e28f !default;
+$blue: #00C6FF !default;
+$orange: #f5981c !default;
+$body-bg: #f8fafc !default;
+$image-border: #ccc !default;
+$radio-background: #f1f1f1 !default;
+$radio-hover: #f7f7f7 !default;
+$theme_font: 'Poppins', sans-serif;
+$theme_base_color: #ff8257 !default;
+$theme_black: #2e3d62 !default;
+$theme_gray: #F3F3F3 !default;
+$text-gray: #666E82 !default;
+$hr-border: EAEAEA !default;
+$list-item: #eee !default;
+$scroll-hover: #9364D4 !default;
+$site-footer: #FAFAFA !default;
+$fa-icon:#5dd8d3 !default;
+$social-link: #BCBFC7 !default;
+$service-icon-primary: #EE539B !default;
+$service-icon-secondary: #FDDD6E !default;
+$menu-btn:#00AD4D !default;
+$nav-box: #282828 !default;
+$nav-main: #181818 !default;
+$menu-toggler: #111111 !default;
+$icon-fb:#4267b2 !default;
+$icon-github:#24292e !default;
+$icon-twitter:#1da1f2 !default;
+$icon-linkendin:#0073b1 !default;
+$image-avatar:#7d68f0 !default;
+$infy-name: #20a8d8;
+$font-family-sans-serif: "Lato",
+    // Safari for OS X and iOS (San Francisco)
+-apple-system,
+    // Chrome < 56 for OS X (San Francisco)
+BlinkMacSystemFont,
+    // Windows
+"Segoe UI",
+    // Android
+"Roboto",
+    // Basic web fallback
+"Helvetica Neue", Arial, sans-serif,
+    // Emoji fonts
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$colors: ();
+
+$colors: map-merge(
+        ("blue" : $blue),
+        $colors
+);
+
+$theme-colors: ();
+$theme-colors: map-merge(
+        (
+            "primary": $blue,
+        ),
+        $theme-colors
+);
+
+$pagination-border-color: #c8ced3 !default;

@@ -1,0 +1,79 @@
+.settings {
+
+    .image__preview {
+        object-fit: contain;
+    }
+}
+
+html[dir="rtl"] {
+
+    @media (max-width: 1544px) {
+        .settings__form {
+            right: 6.3%;
+            max-width: 77%;
+        }
+    }
+
+    @media (max-width: 1250px) {
+        .settings__form {
+            right: 10.3%;
+            max-width: 73%;
+        }
+    }
+
+}
+
+@media (max-width: 1544px) {
+    .settings__form {
+        left: 6.3%;
+        max-width: 77%;
+    }
+}
+
+@media (max-width: 1250px) {
+    .settings__form {
+        left: 10.3%;
+        max-width: 73%;
+    }
+}
+
+@media (max-width: 1060px) {
+    .settings {
+        flex-direction: column;
+        align-items: center;
+
+        .settings__favicon,
+        .settings__logo {
+            max-width: 100%;
+            margin-bottom: 30px;
+
+            .settings__favicon-heading,
+            .settings__logo-heading {
+                margin-left: calc(1px - -15%);
+            }
+        }
+    }
+    .settings__form {
+        left: 0;
+        right: 0 !important;
+        max-width: 100% !important;
+
+        .settings__form-columns {
+            flex-direction: column;
+
+            .col-6 {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.input-group-prepend {
+    .input-group-text {
+        min-width: 45px !important;
+    }
+}
+
+.react-select__input {
+    width: calc(100% - 45px) !important;
+}

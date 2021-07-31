@@ -1,0 +1,242 @@
+@import "../../scss/variables";
+
+.control {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: $input-disabled;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+    background: $input-indicator;
+}
+
+.control input:checked ~ .control__indicator {
+    background: $blue;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+    background: $blue;
+}
+
+.control input:disabled ~ .control__indicator {
+    background: $input-disabled;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.control__indicator:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+.control--checkbox .control__indicator:after {
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid $white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: $control-disabled;
+}
+
+.toggle-label {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+.rbt-input-multi {
+    .rbt-input-hint-container {
+        display: inline-block !important;
+    }
+}
+
+.rbt-input-multi .rbt-input-wrapper {
+    margin-top: 5px !important;
+}
+
+.rbt-input {
+    height: auto;
+    min-height: 45px;
+}
+
+.input-form-group {
+    margin-bottom: 0 !important;
+}
+
+.rbt-input-hint {
+    top: 5px !important;
+}
+
+.react-datepicker-wrapper {
+    width: 86%;
+}
+
+.react-datepicker__input-container {
+    width: 100%;
+    input {
+        width: 100%;
+        text-indent: 12px;
+        border-radius: unset !important;
+        border: 1px solid #e4e7ea;
+    }
+}
+
+.form {
+
+    &__radio {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        display: inline-block;
+        position: relative;
+        background-color: $radio-background;
+        color: #666;
+        top: 10px;
+        height: 22px;
+        width: 22px;
+        border: 0;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-right: 7px;
+        outline: none;
+    }
+    &__label {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: pointer;
+        vertical-align: sub;
+    }
+}
+
+.form__radio:checked::before {
+    position: absolute;
+    font: 12px/1 'Open Sans', sans-serif;
+    left: 7px;
+    top: 4px;
+    content: '\02143';
+    color: $white;
+    transform: rotate(40deg);
+}
+
+.form__radio:hover {
+    background-color: $radio-hover;
+}
+
+.form__radio:checked {
+    background-color: $blue;
+}
+
+.react-select {
+
+    .input-group-text {
+        width: 38px;
+    }
+    &__input {
+        width: calc(100% - 38px);
+
+        input {
+            height: auto;
+        }
+        &--primary {
+            min-height: 43px;
+
+            .css-1hwfws3,
+            .css-1fhf3k1-control,
+            .css-yk16xz-control {
+                min-height: 43px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+        &--secondary {
+            min-height: 38px;
+
+            .css-1hwfws3,
+            .css-1fhf3k1-control,
+            .css-yk16xz-control {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        .css-1ml51p6-MenuList div {
+            cursor: pointer;
+        }
+
+        .css-26l3qy-menu, .css-1w9j89e-menu {
+            z-index: 1234;
+        }
+    }
+}
+
+.custom-input-search {
+    input {
+        height: 38px;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.react-img-cropper {
+
+    &__img {
+        max-width: 100%;
+    }
+}
+
+html[dir="rtl"] {
+
+    .modal-header .close {
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-footer > :not(:last-child) {
+        margin-left: 10px;
+    }
+}
+
+.date-picker-input {
+    @media (max-width: 400px) {
+        flex-wrap: unset;
+    }
+}
+
+.switch-label .switch-slider::before {
+    z-index: unset;
+}
+
+.switch-label .switch-slider::after {
+    z-index: unset;
+}

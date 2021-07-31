@@ -1,0 +1,132 @@
+@import "../../../scss/variables";
+
+html[dir="rtl"] {
+
+    @media (min-width: 1140px) {
+        .book-detail__item {
+            margin: auto 52px 25px auto;
+        }
+    }
+}
+
+.book-image-container {
+    height: 250px;
+    border: 1px solid $image-border;
+    border-radius: 10px;
+    overflow: hidden;
+    @media (max-width: 1139px) {
+        margin: auto;
+    }
+}
+
+.book-image-holder {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    background: gray;
+    object-fit: cover;
+}
+
+.book-detail-row {
+    @media (max-width: 1139px) {
+        flex-flow: column;
+    }
+}
+
+%heading {
+    min-width: 110px;
+    font-weight: 700;
+}
+
+.book-detail {
+
+    &__modal {
+        max-width: 1000px;
+    }
+
+    &__item-container {
+        margin-left: 50px;
+        @media (max-width: 1139px) {
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 25px;
+
+        @media (max-width: 1139px) {
+            width: 100%;
+        }
+
+        @media (min-width: 1140px) {
+            margin: auto auto 25px auto;
+        }
+
+        &-title-heading {
+            @extend %heading;
+        }
+
+        &-isbn-heading {
+            @extend %heading;
+        }
+
+        &-genre-heading {
+            @extend %heading;
+        }
+
+        &-authors-heading {
+            @extend %heading;
+        }
+
+        &-tags-heading {
+            @extend %heading;
+        }
+
+        &-url-heading {
+            @extend %heading;
+        }
+
+        &-desc-heading {
+            @extend %heading;
+        }
+
+        &-desc-text {
+            width: 1250px;
+            word-break: break-word;
+        }
+    }
+
+    &-form-card {
+        display: flex;
+
+        &__hr {
+            margin-top: 0;
+        }
+
+        .image__preview {
+            object-fit: cover;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .book-detail-form-card {
+        flex-direction: column;
+    }
+
+    .book-detail-form-card__primary-details {
+        margin-top: 30px;
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .book-detail-form-card__book-cover {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+}

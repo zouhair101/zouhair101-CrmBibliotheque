@@ -1,0 +1,49 @@
+@import "../../../scss/variables";
+
+.book-history-detail {
+
+    &__modal {
+        max-width: 700px;
+    }
+
+    &__item-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media (max-width: 660px) {
+            width: 100%;
+            flex-flow: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 25px;
+        width: 40%;
+
+        @media (max-width: 660px) {
+            width: 100%;
+        }
+
+        &-heading {
+            width: 120px;
+            font-weight: 700;
+        }
+    }
+
+    &__item-name {
+        display: flex;
+        margin-bottom: 25px;
+        width: 100%;
+
+        &-heading {
+            min-width: 120px;
+            font-weight: 700;
+        }
+    }
+
+    &__item-note {
+        display: flex;
+        margin-bottom: 25px;
+    }
+}
